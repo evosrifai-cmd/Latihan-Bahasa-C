@@ -4,7 +4,10 @@
 int main () {
     float hp = 100;
     char musuh[50];
-    float damage, terkena_damage, damage_terakhir,hp_player;
+    float damage_boss = 50;
+    float damage_hero = 20;
+    float damage_musuh_biasa = 10;
+    float terkena_damage, damage_terakhir,hp_player;
 
     printf("  =======HP HERO SAAT INI=======\n  ");
     printf("    HP PEMAIN SAAT INI:  %d\n  ", hp);
@@ -12,15 +15,12 @@ int main () {
     printf("Masukkan musuh yang dilawan: ");
     scanf("%49s", musuh);
 
-    printf("  Masukkan damage yang diberikan: ");
-    scanf("%f", &damage);
-
     if (strcmp(musuh, "boss") == 0) {
         printf("========== Hati-hati Lawan boss ==========\n");
         
-        terkena_damage = damage * 0.2;
+        terkena_damage = damage_boss * 0.2;
         
-        damage_terakhir = damage + terkena_damage;
+        damage_terakhir = damage_boss + terkena_damage;
 
         hp_player = hp - damage_terakhir;
     }
@@ -28,9 +28,9 @@ int main () {
     else if (strcmp(musuh, "hero") == 0) {
         printf("=Melawan Hero dari player masing-masing=\n");
 
-        terkena_damage = damage * 0.1;
+        terkena_damage = damage_hero * 0.1;
 
-        damage_terakhir = damage + terkena_damage;
+        damage_terakhir = damage_hero + terkena_damage;
         
         hp_player = hp - damage_terakhir;
     }
@@ -40,7 +40,7 @@ int main () {
 
         terkena_damage = 0;
 
-        damage_terakhir = damage + terkena_damage;
+        damage_terakhir = damage_musuh_biasa + terkena_damage;
 
         hp_player = hp - damage_terakhir;
     }
