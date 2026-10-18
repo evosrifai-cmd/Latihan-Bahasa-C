@@ -10,7 +10,7 @@ int main () {
     float terkena_damage, damage_terakhir,hp_player;
 
     printf("  =======HP HERO SAAT INI=======\n  ");
-    printf("    HP PEMAIN SAAT INI:  %d\n  ", hp);
+    printf("    HP PEMAIN SAAT INI:  %0.f\n  ", hp);
 
     printf("Masukkan musuh yang dilawan: ");
     scanf("%49s", musuh);
