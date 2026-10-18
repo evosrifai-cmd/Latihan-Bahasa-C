@@ -5,7 +5,7 @@ int main () {
     float hp = 100;
     char musuh[50];
     float damage_boss = 50;
-    float damage_hero = 20;
+    float damage_hero = 15;
     float damage_musuh_biasa = 10;
     float terkena_damage, damage_terakhir,hp_player;
 
